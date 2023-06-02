@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <title>Conditional Statements</title>
+</head>
+
+<body>
+    <script>
+        var amount = Number(prompt("Enter the amount"));
+        var sendAmount;
+        var environments = prompt("Enter the environment");
+        console.log(environments);
+        if (environments == "Development") {
+            sendAmount = amount + (amount / 100) * 10;
+            console.log("Send Amount:",sendAmount);
+        }
+        else if (environments == "Testing") {
+            sendAmount = amount + (amount / 100) * 20;
+            console.log("Send Amount:",sendAmount);
+        }
+
+        switch (environments) {
+            case "Staging":
+                sendAmount = amount + (amount / 100) * 30;
+                console.log("Send Amount:",sendAmount);
+                break;
+
+            case "Production":
+                sendAmount = amount + (amount / 100) * 5;7
+                console.log("Send Amount:",sendAmount);
+                break;
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>
