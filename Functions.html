@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <title>
+        Functions
+    </title>
+</head>
+
+<body>
+    <script>
+        const h = ["Working Out", "Watching Football and other sports", "Browsing Stuff"];
+
+        function Hobbies() {
+            return h;
+        }
+
+        var a = Hobbies();
+        document.write("Newly formed Array: ", a, "<br>");
+        document.write("<br>")
+
+        function add(newHobby) {
+            h.push(newHobby);
+            return a;
+        }
+
+        add("Time Pasing through Social network");
+        document.write("Array after adding a new hobby: ", add(), "<br>");
+        document.write("<br>")
+
+        function remove() {
+            var data = prompt("Enter the string");
+            for (var i = 0; i < h.length; i++) {
+
+                if (h[i] === data) {
+                    h.splice(i, 1);
+                }
+
+            }
+            return a;
+        }
+        document.write("Array after removing an element: " ,remove());
+
+    </script>
+
+
+</body>
+
+</html>
