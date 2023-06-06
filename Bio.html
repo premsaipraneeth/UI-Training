@@ -1,0 +1,53 @@
+<head>
+    <title>Profile Information</title>
+</head>
+<body style="text-align: center">
+<h1>My Bio</h1>
+
+First Name: <input type="text" id="1"/>
+<p id="firstName"></p>
+
+Last Name: <input type="text" id="2"/>
+<p id="lastName"></p>
+
+DOB: <input type="text" id="3"/>
+<p id="dob"></p>
+
+Email: <input type="text" id="4"/>
+<p id="email"></p>
+
+Phone No.: <input type="text" id="5"/>
+<p id="phone"></p>
+
+<button onclick="Submit()">Submit</button>
+
+<script>
+    function Submit(){
+        var fn = document.getElementById("1").value;
+        
+        var ln = document.getElementById("2").value;
+    
+        var birthdate = document.getElementById("3").value;
+        
+        var mail = document.getElementById("4").value;
+
+        var number = document.getElementById("5").value;
+
+        document.getElementById("firstName").innerHTML = "First Name is : "+ fn;
+        document.getElementById("lastName").innerHTML = "Last name is : " + ln;
+        document.getElementById("dob").innerHTML = "Date of birth is : " + birthdate;
+        document.getElementById("email").innerHTML = "E-mail is : " + mail;
+        document.getElementById("phone").innerHTML = "Mobile no. is : "+ number;
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+</body>
