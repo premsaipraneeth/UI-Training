@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Biodata</title>
+    </head>
+
+<body>
+    <form>
+        <div class="form">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" required>
+        </div>
+
+        <div class="form">
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" required>
+        </div>
+
+        <div class="form">
+            <label for="gender">Gender:</label>
+            <input type="text" id="gender" required>
+        </div>
+
+        <div class="form">
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+        </div>
+
+        <div class="form">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" required>
+        </div>
+
+        <div class="form">
+            <label>Hobbies:</label>
+            <input type="checkbox" id="hobby1" name="hobbies" value="Working Out">
+            <label for="hobby1">Working Out</label>
+            <input type="checkbox" id="hobby2" name="hobbies" value="Browsing Net">
+            <label for="hobby2">Browsing Net</label>
+            <input type="checkbox" id="hobby3" name="hobbies" value="Watching Football and other sports">
+            <label for="hobby3">Watching Football and other sports</label>
+        </div>
+
+        <div class="form">
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" required>
+        </div>
+
+        <div class="form">
+            <button type="button" onclick="Bio()">Submit</button>
+        </div>
+    </form>
+
+    <p id="Biodata"></p>
+
+    <script>
+        function Bio() {
+            var firstName = document.getElementById('firstName').value;
+            var lastName = document.getElementById('lastName').value;
+            var gender = document.getElementById('gender').value;
+            var email = document.getElementById('email').value;
+            var phone = document.getElementById('phone').value;
+            var hobbies = document.querySelectorAll('input[name="hobbies"]:checked');
+            var hob = Array.from(hobbies).map(hobby => hobby.value);
+            var dob = document.getElementById('dob').value;
+
+            var biodata = document.getElementById('Biodata');
+            biodata.innerHTML =
+                "First Name: " + firstName + "<br>"+
+                "Last Name: " + lastName + "<br>"+
+                "Gender: " + gender + "<br>" +
+                "Email: " + email + "<br>" +
+                "Phone: " + phone + "<br>" +
+                "Hobbies: " + hob.join(", ") + "<br>" +
+                "Date of Birth: " + dob;
+        }
+    </script>
+</body>
+
+</html>
